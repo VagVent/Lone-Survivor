@@ -7,6 +7,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Level_1_World extends World
 {
+    private Hero hero;
 
     /**
      * Constructor for objects of class MyWorld.
@@ -15,7 +16,8 @@ public class Level_1_World extends World
     public Level_1_World()
     {    
         // Create a new world with 3000x600 cells with a cell size of 1x1 pixels.
-        super(3000, 600, 1); 
+        super(3000, 600, 1);
+        
         prepare();
     }
 
@@ -25,6 +27,10 @@ public class Level_1_World extends World
      */
     private void prepare()
     {
-        
+        hero = new Hero();         //creates the actor to maintain view on        
+        addObject(hero, 55, 500);  //add actor to world
+
+        Ground ground = new Ground();
+        addObject(ground,1501, 600);
     }
 }
