@@ -1,14 +1,14 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Hero υλοποιεί τον παίχτη στο παιχνίδι.
+ * Hero class is for the player at the game.
  * 
- * @author VangVent
- * @version (31/5/2020)
+ * @author Vangelis Ventoulis
+ * @version (13/1/2021)
  */
 public class Hero extends Actor
 {
-    private int speed = 10;
+    private int speed = 10;         // speed of the Hero's move
     private int direction = 1;      // diraction=1 to right, diraction=-1 to left
     
     // Arrays with asset of Hero
@@ -17,6 +17,7 @@ public class Hero extends Actor
     private GreenfootImage[] leftImages;   
     private int currentImage;
     
+    // constructor
     public Hero()
     {
 
@@ -74,7 +75,7 @@ public class Hero extends Actor
     }
 
     /**
-     * MOve Hero at left way when press the left arrow.
+     * Move Hero at left way when press the left arrow.
      */
     private void moveLeft()
     {

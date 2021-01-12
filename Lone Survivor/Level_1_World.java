@@ -3,7 +3,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * 1st Level
  * 
- * @ version (31/5/2020)
+ * @author Vangelis Ventoulis
+ * @ version (13/1/2021)
  */
 public class Level_1_World extends World
 {

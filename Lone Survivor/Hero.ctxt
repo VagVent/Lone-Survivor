@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Hero
-comment0.text=\r\n\ Hero\ \u03C5\u03BB\u03BF\u03C0\u03BF\u03B9\u03B5\u03AF\ \u03C4\u03BF\u03BD\ \u03C0\u03B1\u03AF\u03C7\u03C4\u03B7\ \u03C3\u03C4\u03BF\ \u03C0\u03B1\u03B9\u03C7\u03BD\u03AF\u03B4\u03B9.\r\n\ \r\n\ @author\ VangVent\r\n\ @version\ (31/5/2020)\r\n
+comment0.text=\r\n\ Hero\ class\ is\ for\ the\ player\ at\ the\ game.\r\n\ \r\n\ @author\ Vangelis\ Ventoulis\r\n\ @version\ (13/1/2021)\r\n
 comment1.params=
 comment1.target=Hero()
 comment2.params=
@@ -14,7 +14,7 @@ comment4.target=void\ moveRight()
 comment4.text=\r\n\ Move\ Hero\ at\ right\ way\ when\ press\ the\ right\ arrow.\r\n
 comment5.params=
 comment5.target=void\ moveLeft()
-comment5.text=\r\n\ MOve\ Hero\ at\ left\ way\ when\ press\ the\ left\ arrow.\r\n
+comment5.text=\r\n\ Move\ Hero\ at\ left\ way\ when\ press\ the\ left\ arrow.\r\n
 comment6.params=table
 comment6.target=greenfoot.GreenfootImage[]\ switchImage(greenfoot.GreenfootImage[])
 comment6.text=\r\n\ Switch\ the\ pictures\ of\ Hero's\ asset.\r\n
