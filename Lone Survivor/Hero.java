@@ -9,15 +9,16 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Hero extends Actor
 {
     private int speed = 10;           // speed of the Hero's move
-    private int direction = 1;        // diraction=1 to right, diraction=-1 to left
+    private int direction = 1;        // direction=1 to right, direction=-1 to left
     private int acceleration = 4;     // acceleration of gravity
     private int jumpStrength = 30;    
     private int vSpeed = 0;           // the speed of hero when he is jumpping
     
-    // Arrays with asset of Hero
+    // arrays with asset of Hero
     private static final int NUM_OF_IMAGES = 7;
     private GreenfootImage[] rightImages;
-    private GreenfootImage[] leftImages;   
+    private GreenfootImage[] leftImages;
+    
     private int currentImage;
     
     // constructor
@@ -107,7 +108,7 @@ public class Hero extends Actor
     }
     
     /**
-     * Hero can jump 
+     * Hero can jump. 
      */
     private void jump()
     {
