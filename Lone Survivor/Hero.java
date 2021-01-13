@@ -4,7 +4,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * Hero class is for the player at the game.
  * 
  * @author Vangelis Ventoulis
- * @version (13/1/2021)
+ * @version 
  */
 public class Hero extends Actor
 {

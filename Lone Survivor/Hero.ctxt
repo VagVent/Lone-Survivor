@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Hero
-comment0.text=\r\n\ Hero\ class\ is\ for\ the\ player\ at\ the\ game.\r\n\ \r\n\ @author\ Vangelis\ Ventoulis\r\n\ @version\ (13/1/2021)\r\n
+comment0.text=\r\n\ Hero\ class\ is\ for\ the\ player\ at\ the\ game.\r\n\ \r\n\ @author\ Vangelis\ Ventoulis\r\n\ @version\ \r\n
 comment1.params=
 comment1.target=Hero()
 comment10.params=
@@ -29,5 +29,5 @@ comment8.target=boolean\ onGround()
 comment8.text=\r\n\ Check\ if\ Hero\ is\ on\ ground.\r\n
 comment9.params=
 comment9.target=void\ checkFall()
-comment9.text=\r\n\ Check\ if\ Hero\ falls\ to\ add\ speed\ of\ gravity\ acceleration\r\n
+comment9.text=\r\n\ Check\ if\ Hero\ falls\ to\ add\ speed\ of\ gravity\ acceleration.\r\n
 numComments=11
