@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Enemy
+comment0.text=\r\n\ The\ Enemy\ class\ contains\ the\ method\ switch\ image\ witch\ is\ used\ from\ all\ enemies\ avatar\r\n\ classes\ Zombie.\r\n\ \r\n\ @author\ Vangelis\ Ventoulis\ \r\n\ @version\ \r\n
+comment1.params=table\ NUM_OF_IMAGES
+comment1.target=greenfoot.GreenfootImage[]\ switchImage(greenfoot.GreenfootImage[],\ int)
+comment1.text=\r\n\ Method\ for\ switching\ images\ asset.\r\n
+numComments=2

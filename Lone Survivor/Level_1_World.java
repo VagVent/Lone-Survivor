@@ -8,14 +8,13 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Level_1_World extends World
 {
-    private static final int WIDE = 1000; // width viewport
+    private static final int WIDE = 1000;   // width viewport
     private static final int HEIGHT = 600;  // height viewport
     
     private Hero hero;
     
     private Scroller scroller;
-    
-    
+        
     
     /**
      * Constructor for objects of class MyWorld.
@@ -44,11 +43,27 @@ public class Level_1_World extends World
      */
     private void prepare()
     {
-        hero = new Hero();         //creates the actor to maintain view on        
-        addObject(hero, 55, 500);  //add actor to world
-
-        Ground ground = new Ground();
+        // add the ground of the 1st level
+        Ground ground = new Ground();  
         addObject(ground,1501, 600);
+        
+        hero = new Hero();         // creates the actor to maintain view on        
+        addObject(hero, 55, 500);  // add actor to world
+
+        /******************************************************************
+         * 
+         * Creation of the zombies at 1st level.
+         * 
+         *****************************************************************/
+         
+        Zombie_1 zombie_01 = new Zombie_1();
+        addObject(zombie_01,612,500);
+        
+        /******************************************************************
+         * 
+         * End of the creation of the zombies.
+         * 
+         *****************************************************************/
     }
     
     /**
