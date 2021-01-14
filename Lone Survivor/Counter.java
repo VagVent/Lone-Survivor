@@ -38,8 +38,6 @@ public class Counter extends Actor
     private int target;
     private String prefix;
     
-    private int enemyKills = 0; // a counter for enemies which were killed from Hero
-    
     public Counter()
     {
         this(new String());
@@ -79,7 +77,6 @@ public class Counter extends Actor
     public void add(int score)
     {
         target += score;
-        enemyKills++;
     }
 
     /**
@@ -127,14 +124,6 @@ public class Counter extends Actor
                         (image.getHeight()-text.getHeight())/2);
         setImage(image);
     }
-    
-    /**
-     * Getter of variable enemyKills
-     */
-    public int getEnemyKills()
-    {
-        return enemyKills;
-    }   
     
     /**
      * Overwrite to stay in the same position the graphic of the counter when the Hero is moving.

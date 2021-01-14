@@ -13,7 +13,7 @@ public class Zombie_1 extends Enemy
     private int walkSteps = 0;  // a counter to change direction
     private int health = 50;    // the health/life of the zombie
     private int strength = 1;   // the hit strength of the zombie
-    private int points = 5;
+    private int points = 5;     // which gain the hero when he kills this zombie
     
     // store the images-asset of 1st zombie
     private static final int NUM_OF_IMAGES = 12;
@@ -153,6 +153,8 @@ public class Zombie_1 extends Enemy
         if (hero != null)
         {
             Level_1_World world = (Level_1_World)getWorld();
+            HealthBar healthbar = world.getHealthBar();
+            healthbar.loseHealth(strength);            
 
             if (direction == -1) 
             {

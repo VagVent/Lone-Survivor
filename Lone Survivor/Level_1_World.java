@@ -3,19 +3,19 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * 1st Level
  * 
- * @ author Vangelis Ventoulis
- * @ version 
+ * @author Vangelis Ventoulis
+ * @version 
  */
 public class Level_1_World extends World
 {
     private static final int WIDE = 1000;   // width viewport
     private static final int HEIGHT = 600;  // height viewport
     
-    private Hero hero;
-    
+    private Hero hero;    
     private Scroller scroller;
     
-    private Counter counter;
+    private Counter counter;    
+    private HealthBar healthbar;
     
     /**
      * Constructor for objects of class MyWorld. 
@@ -53,6 +53,10 @@ public class Level_1_World extends World
         // add counter into the world
         counter = new Counter("Score: ");
         addObject(counter, 65, 25);
+        
+        // add Hero's healthbar into the world
+        healthbar = new HealthBar();
+        addObject(healthbar, 65, 60);
         
         /******************************************************************
          * 
@@ -94,7 +98,7 @@ public class Level_1_World extends World
     }
     
     /**
-     * Μέθοδος για την προσθήκη πόντων στον counter
+     * Method to add points at the counter.
      */
     public void addPointToCounter(int points)
     {
@@ -102,10 +106,26 @@ public class Level_1_World extends World
     }
 
     /**
-     * Μέθοδος για την επιστοφή των πόντων ποπυ έχει ο counter
+     * Getter of the value of the counter.
      */
     public int getCounter()
     {
         return counter.getValue();
+    }
+    
+    /**
+     * Getter of HealthBar.
+     */
+    public HealthBar getHealthBar()
+    {
+        return healthbar;
+    }
+    
+    /**
+     * Getter of the value of Hero's health.
+     */
+    public int getHealth()
+    {
+        return healthbar.getHealth();
     }
 }
