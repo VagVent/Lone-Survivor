@@ -13,6 +13,7 @@ public class Zombie_1 extends Enemy
     private int walkSteps = 0;  // a counter to change direction
     private int health = 50;    // the health/life of the zombie
     private int strength = 1;   // the hit strength of the zombie
+    private int points = 5;
     
     // store the images-asset of 1st zombie
     private static final int NUM_OF_IMAGES = 12;
@@ -133,8 +134,12 @@ public class Zombie_1 extends Enemy
             switchImage(rightImagesDying, NUM_OF_IMAGES);
             setLocation(getX(), getY() + 3);
         }
-
+        
+        // to adding the dead zombies' points to the counter
         Level_1_World world = (Level_1_World)getWorld();
+        world.addPointToCounter(points);
+        
+        // for remove the dead zombie of the world
         getWorld().removeObject(this);
     }
     
@@ -156,7 +161,7 @@ public class Zombie_1 extends Enemy
 
             else  if (direction == 1) 
             {
-                switchImage(rightImagesAttacking, NUM_OF_IMAGES);
+               switchImage(rightImagesAttacking, NUM_OF_IMAGES);
             }
         }
     }

@@ -14,11 +14,11 @@ public class Level_1_World extends World
     private Hero hero;
     
     private Scroller scroller;
-        
+    
+    private Counter counter;
     
     /**
-     * Constructor for objects of class MyWorld.
-     * 
+     * Constructor for objects of class MyWorld. 
      */
     public Level_1_World()
     {    
@@ -49,7 +49,11 @@ public class Level_1_World extends World
 
         hero = new Hero();         // creates the actor to maintain view on        
         addObject(hero, 55, 500);  // add actor to world
-
+        
+        // add counter into the world
+        counter = new Counter("Score: ");
+        addObject(counter, 65, 25);
+        
         /******************************************************************
          * 
          * Creation of the zombies at 1st level.
@@ -87,5 +91,21 @@ public class Level_1_World extends World
         int dsy = hero.getY() - HEIGHT / 2;
 
         scroller.scroll(dsx, dsy);
+    }
+    
+    /**
+     * Μέθοδος για την προσθήκη πόντων στον counter
+     */
+    public void addPointToCounter(int points)
+    {
+        counter.add(points);
+    }
+
+    /**
+     * Μέθοδος για την επιστοφή των πόντων ποπυ έχει ο counter
+     */
+    public int getCounter()
+    {
+        return counter.getValue();
     }
 }
