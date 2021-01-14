@@ -18,24 +18,29 @@ public class Hero extends Actor
     private static final int NUM_OF_IMAGES = 7;
     private GreenfootImage[] rightImages;
     private GreenfootImage[] leftImages;
+    private GreenfootImage[] fireRightImages;
+    private GreenfootImage[] fireLeftImages;
     
     private int currentImage;
     
-    // constructor
     public Hero()
     {
 
         rightImages = new GreenfootImage[NUM_OF_IMAGES];
         leftImages = new GreenfootImage[NUM_OF_IMAGES];
+        fireRightImages = new GreenfootImage[NUM_OF_IMAGES];
+        fireLeftImages = new GreenfootImage[NUM_OF_IMAGES];
 
         for (int i = 0; i < NUM_OF_IMAGES; i++) 
         {
             rightImages[i] = new GreenfootImage ("walk_right_0" + i + ".png");
             leftImages[i] = new GreenfootImage ("walk_left_0" + i + ".png");
+            fireRightImages[i] = new GreenfootImage ("attack_right_0" + i + ".png");
+            fireLeftImages[i] = new GreenfootImage ("attack_left_0" + i + ".png");
         }
 
         currentImage = 0;
-        setImage(rightImages[currentImage]);        
+        setImage(rightImages[currentImage]);
     }
     
     /**
@@ -79,16 +84,20 @@ public class Hero extends Actor
             }
         }
         
+        // space.equals(Greenfoot.getKey())) it is used to fire only when press and leave the 
+        // spacebar
         if ("space".equals(Greenfoot.getKey()))
         {
             if (direction == 1)
             { 
                 fireRight();
+                switchImage(fireRightImages);
             }
 
             else if (direction == -1)
             {
                 fireLeft();
+                switchImage(fireLeftImages);
             }
 
         }
