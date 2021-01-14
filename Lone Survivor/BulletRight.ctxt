@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=BulletRight
+comment0.text=\r\n\ BulletRight\ is\ for\ bullets\ that\ the\ Hero\ can\ shoot.\r\n\ \r\n\ @author\ Vangelis\ Ventoulis\ \r\n\ @version\ \r\n
+comment1.params=
+comment1.target=BulletRight()
+comment2.params=
+comment2.target=void\ act()
+comment2.text=\r\n\ Act\ -\ do\ whatever\ the\ BulletRight\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment3.params=
+comment3.target=void\ shootRight()
+comment3.text=\r\n\ Method\ for\ checking\ the\ distance\ of\ the\ bullet\ that\ has\ traveled.\r\n
+comment4.params=
+comment4.target=void\ checkEnemyHit()
+comment4.text=\r\n\ \u039C\u03AD\u03B8\u03BF\u03B4\u03BF\u03C2\ \u03B3\u03B9\u03B1\ \u03C4\u03BF\u03BD\ \u03AD\u03BB\u03B5\u03B3\u03C7\u03BF\ \u03B1\u03BD\ \u03AD\u03C7\u03B5\u03B9\ \u03C7\u03C4\u03C5\u03C0\u03AE\u03C3\u03B5\u03B9\ \u03BA\u03AC\u03C0\u03BF\u03B9\u03BF\ Zombie.\r\n
+numComments=5

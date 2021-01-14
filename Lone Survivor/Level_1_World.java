@@ -3,22 +3,22 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * 1st Level
  * 
- * @ author Vangelis Ventoulis
- * @ version 
+ * @author Vangelis Ventoulis
+ * @version 
  */
 public class Level_1_World extends World
 {
     private static final int WIDE = 1000;   // width viewport
     private static final int HEIGHT = 600;  // height viewport
     
-    private Hero hero;
-    
+    private Hero hero;    
     private Scroller scroller;
-        
+    
+    private Counter counter;    
+    private HealthBar healthbar;
     
     /**
-     * Constructor for objects of class MyWorld.
-     * 
+     * Constructor for objects of class MyWorld. 
      */
     public Level_1_World()
     {    
@@ -46,19 +46,27 @@ public class Level_1_World extends World
         // add the ground of the 1st level
         Ground ground = new Ground();  
         addObject(ground,1501, 600);
-        
+
         hero = new Hero();         // creates the actor to maintain view on        
         addObject(hero, 55, 500);  // add actor to world
-
+        
+        // add counter into the world
+        counter = new Counter("Score: ");
+        addObject(counter, 65, 25);
+        
+        // add Hero's healthbar into the world
+        healthbar = new HealthBar();
+        addObject(healthbar, 65, 60);
+        
         /******************************************************************
          * 
          * Creation of the zombies at 1st level.
          * 
          *****************************************************************/
-         
+
         Zombie_1 zombie_01 = new Zombie_1();
         addObject(zombie_01,612,500);
-        
+
         /******************************************************************
          * 
          * End of the creation of the zombies.
@@ -87,5 +95,37 @@ public class Level_1_World extends World
         int dsy = hero.getY() - HEIGHT / 2;
 
         scroller.scroll(dsx, dsy);
+    }
+    
+    /**
+     * Method to add points at the counter.
+     */
+    public void addPointToCounter(int points)
+    {
+        counter.add(points);
+    }
+
+    /**
+     * Getter of the value of the counter.
+     */
+    public int getCounter()
+    {
+        return counter.getValue();
+    }
+    
+    /**
+     * Getter of HealthBar.
+     */
+    public HealthBar getHealthBar()
+    {
+        return healthbar;
+    }
+    
+    /**
+     * Getter of the value of Hero's health.
+     */
+    public int getHealth()
+    {
+        return healthbar.getHealth();
     }
 }

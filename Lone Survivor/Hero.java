@@ -9,32 +9,38 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Hero extends Actor
 {
     private int speed = 10;           // speed of the Hero's move
-    private int direction = 1;        // diraction=1 to right, diraction=-1 to left
+    private int direction = 1;        // direction=1 to right, direction=-1 to left
     private int acceleration = 4;     // acceleration of gravity
     private int jumpStrength = 30;    
     private int vSpeed = 0;           // the speed of hero when he is jumpping
     
-    // Arrays with asset of Hero
+    // arrays with asset of Hero
     private static final int NUM_OF_IMAGES = 7;
     private GreenfootImage[] rightImages;
-    private GreenfootImage[] leftImages;   
+    private GreenfootImage[] leftImages;
+    private GreenfootImage[] fireRightImages;
+    private GreenfootImage[] fireLeftImages;
+    
     private int currentImage;
     
-    // constructor
     public Hero()
     {
 
         rightImages = new GreenfootImage[NUM_OF_IMAGES];
         leftImages = new GreenfootImage[NUM_OF_IMAGES];
+        fireRightImages = new GreenfootImage[NUM_OF_IMAGES];
+        fireLeftImages = new GreenfootImage[NUM_OF_IMAGES];
 
         for (int i = 0; i < NUM_OF_IMAGES; i++) 
         {
             rightImages[i] = new GreenfootImage ("walk_right_0" + i + ".png");
             leftImages[i] = new GreenfootImage ("walk_left_0" + i + ".png");
+            fireRightImages[i] = new GreenfootImage ("attack_right_0" + i + ".png");
+            fireLeftImages[i] = new GreenfootImage ("attack_left_0" + i + ".png");
         }
 
         currentImage = 0;
-        setImage(rightImages[currentImage]);        
+        setImage(rightImages[currentImage]);
     }
     
     /**
@@ -76,6 +82,23 @@ public class Hero extends Actor
             {
                 jump();
             }
+        }
+        
+        // space.equals(Greenfoot.getKey())) it is used to fire only when press and leave the 
+        // spacebar
+        if ("space".equals(Greenfoot.getKey()))
+        {
+            if (direction == 1)
+            { 
+                fireRight();
+                switchImage(fireRightImages);
+            }
+
+            else if (direction == -1)
+            {
+                fireLeft();
+                switchImage(fireLeftImages);
+            }
 
         }
     }
@@ -107,7 +130,7 @@ public class Hero extends Actor
     }
     
     /**
-     * Hero can jump 
+     * Hero can jump. 
      */
     private void jump()
     {
@@ -147,5 +170,27 @@ public class Hero extends Actor
     {
         setLocation(getX(), getY() + vSpeed);
         vSpeed = vSpeed + acceleration;
+    }
+    
+    /**
+     * Method by which the Hero can fire bullets to the left way.
+     */
+    private void fireLeft()
+    {
+        BulletLeft bulletLeft = new BulletLeft();
+        // the subtraction of 48 cells at the X-axis and 14 cells at the Y-axis,
+        // is for start fire the bullets at the height of the gun
+        getWorld().addObject(bulletLeft, getX() - 48, getY() - 14);
+    }
+    
+    /**
+     * Method by which the Hero can fire bullets to the right way.
+     */
+    private void fireRight()
+    {
+        BulletRight bulletRight = new BulletRight();
+        // the addition of 48 cells at the X-axis and the subtraction of 14 cells at the Y-axis,
+        // is for start fire the bullets at the height of the gun
+        getWorld().addObject(bulletRight, getX() + 48, getY() - 14);
     }
 }

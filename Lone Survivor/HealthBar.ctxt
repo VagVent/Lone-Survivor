@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=HealthBar
+comment0.text=\r\n\ HealthBar\ of\ the\ Hero's\ life.\r\n\ \r\n\ @author\ Vangelis\ Ventoulis\r\n\ @version\ \r\n
+comment1.params=
+comment1.target=HealthBar()
+comment2.params=
+comment2.target=void\ act()
+comment2.text=\r\n\ Act\ -\ do\ whatever\ the\ HealthBar\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment3.params=
+comment3.target=void\ update()
+comment3.text=\r\n\ Method\ to\ update\ the\ graphic\ of\ healthbar.\r\n
+comment4.params=strength
+comment4.target=void\ loseHealth(int)
+comment4.text=\r\n\ Method\ to\ count\ on\ the\ damage\ of\ the\ zombies'\ hit\ to\ the\ hero.\r\n
+comment5.params=
+comment5.target=int\ getHealth()
+comment5.text=\r\n\ Getter\ of\ the\ health's\ value.\r\n
+comment6.params=x\ y
+comment6.target=void\ setLocation(int,\ int)
+comment6.text=\r\n\ Overwrite\ to\ stay\ in\ the\ same\ position\ the\ graphic\ of\ the\ healbar\ when\ the\ Hero\ is\ moving.\r\n
+numComments=7
