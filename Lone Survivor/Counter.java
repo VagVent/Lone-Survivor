@@ -136,6 +136,9 @@ public class Counter extends Actor
         return enemyKills;
     }   
     
+    /**
+     * Overwrite to stay in the same position the graphic of the counter when the Hero is moving.
+     */
     public void setLocation(int x, int y) 
     {
         

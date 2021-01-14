@@ -5,6 +5,7 @@ comment1.params=
 comment1.target=Counter()
 comment10.params=x\ y
 comment10.target=void\ setLocation(int,\ int)
+comment10.text=\r\n\ Overwrite\ to\ stay\ in\ the\ same\ position\ the\ graphic\ of\ the\ counter\ when\ the\ Hero\ is\ moving.\r\n
 comment2.params=prefix
 comment2.target=Counter(java.lang.String)
 comment2.text=\r\n\ Create\ a\ new\ counter,\ initialised\ to\ 0.\r\n
