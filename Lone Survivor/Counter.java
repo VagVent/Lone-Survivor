@@ -135,9 +135,4 @@ public class Counter extends Actor
     {
         return enemyKills;
     }   
-    
-    public void setLocation(int x, int y) 
-    {
-        
-    }
 }
