@@ -11,7 +11,8 @@ public class Zombie_1 extends Enemy
     private int direction = -1; // direction of zombie avatar to left. -1 is for left and 1 for right
     private int speed = 7;      // speed of the moving zombie
     private int walkSteps = 0;  // a counter to change direction
-     private int health = 50;   // the health/life of the zombie
+    private int health = 50;    // the health/life of the zombie
+    private int strength = 1;   // the hit strength of the zombie
     
     // store the images-asset of 1st zombie
     private static final int NUM_OF_IMAGES = 12;
@@ -19,7 +20,9 @@ public class Zombie_1 extends Enemy
     private GreenfootImage[] leftImages = new GreenfootImage[NUM_OF_IMAGES];
     private GreenfootImage[] rightImagesDying = new GreenfootImage[NUM_OF_IMAGES];
     private GreenfootImage[] leftImagesDying = new GreenfootImage[NUM_OF_IMAGES];
-    
+    private GreenfootImage[] rightImagesAttacking = new GreenfootImage[NUM_OF_IMAGES];
+    private GreenfootImage[] leftImagesAttacking = new GreenfootImage[NUM_OF_IMAGES];
+        
     private int currentImage = 0; // variable to restart from the 1st image
     
     public Zombie_1() 
@@ -31,7 +34,8 @@ public class Zombie_1 extends Enemy
             leftImages[i] = new GreenfootImage ("Zombie_01_Walking_left_0" + i + ".png");
             rightImagesDying[i] = new GreenfootImage ("Zombie_01_Dying_right_0" + i + ".png");
             leftImagesDying[i] = new GreenfootImage ("Zombie_01_Dying_left_0" + i + ".png");
-            
+            rightImagesAttacking[i] = new GreenfootImage ("Zombie_01_Attacking_right_0" + i + ".png");
+            leftImagesAttacking[i] = new GreenfootImage ("Zombie_01_Attacking_left_0" + i + ".png");
         }
         
         currentImage = 0;
@@ -45,6 +49,7 @@ public class Zombie_1 extends Enemy
     public void act() 
     {
         walk();
+        hitHero();
     }
     
     /**
@@ -131,5 +136,28 @@ public class Zombie_1 extends Enemy
 
         Level_1_World world = (Level_1_World)getWorld();
         getWorld().removeObject(this);
+    }
+    
+    /**
+     * Method to check the attack to Hero when they intersecting.
+     */
+    private void hitHero() 
+    {     
+        Actor hero = (Hero) getOneIntersectingObject(Hero.class);
+        
+        if (hero != null)
+        {
+            Level_1_World world = (Level_1_World)getWorld();
+
+            if (direction == -1) 
+            {
+                switchImage(leftImagesAttacking, NUM_OF_IMAGES);
+            }
+
+            else  if (direction == 1) 
+            {
+                switchImage(rightImagesAttacking, NUM_OF_IMAGES);
+            }
+        }
     }
 }
