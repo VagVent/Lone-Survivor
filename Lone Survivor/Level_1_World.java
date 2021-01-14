@@ -46,7 +46,7 @@ public class Level_1_World extends World
         // add the ground of the 1st level
         Ground ground = new Ground();  
         addObject(ground,1501, 600);
-        
+
         hero = new Hero();         // creates the actor to maintain view on        
         addObject(hero, 55, 500);  // add actor to world
 
@@ -55,10 +55,10 @@ public class Level_1_World extends World
          * Creation of the zombies at 1st level.
          * 
          *****************************************************************/
-         
+
         Zombie_1 zombie_01 = new Zombie_1();
         addObject(zombie_01,612,500);
-        
+
         /******************************************************************
          * 
          * End of the creation of the zombies.

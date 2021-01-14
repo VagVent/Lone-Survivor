@@ -11,6 +11,7 @@ public class Zombie_1 extends Enemy
     private int direction = -1; // direction of zombie avatar to left. -1 is for left and 1 for right
     private int speed = 7;      // speed of the moving zombie
     private int walkSteps = 0;  // a counter to change direction
+     private int health = 50;   // the health/life of the zombie
     
     // store the images-asset of 1st zombie
     private static final int NUM_OF_IMAGES = 12;
@@ -78,5 +79,13 @@ public class Zombie_1 extends Enemy
         move(speed);
         switchImage(rightImages, NUM_OF_IMAGES);
         direction = 1;
+    }
+    
+    /**
+     * Μέθοδος η οποία χρησιμοποιείται όταν ο παίχτης χτυπάει με σφαίρα το Zombie.
+     */
+    public void hurt(int damage) 
+    {
+        health = health - damage;
     }
 }

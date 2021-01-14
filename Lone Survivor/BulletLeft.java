@@ -43,6 +43,21 @@ public class BulletLeft extends Actor
         {
             bulletDistance--;
             move(-BULLETSPEED);
+            checkEnemyHit();
         }
-    }    
+    }
+    
+    /**
+     * Μέθοδος για τον έλεγχο αν έχει χτυπήσει κάποιο Zombie.
+     */
+    private void checkEnemyHit()
+    {
+        Zombie_1 zombie1 = (Zombie_1) getOneIntersectingObject(Zombie_1.class);
+
+        if (zombie1 != null)
+        {            
+            zombie1.hurt(BULLETDAMAGE);
+            getWorld().removeObject(this);
+        }
+    }
 }
