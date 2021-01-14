@@ -17,6 +17,8 @@ public class Zombie_1 extends Enemy
     private static final int NUM_OF_IMAGES = 12;
     private GreenfootImage[] rightImages = new GreenfootImage[NUM_OF_IMAGES];
     private GreenfootImage[] leftImages = new GreenfootImage[NUM_OF_IMAGES];
+    private GreenfootImage[] rightImagesDying = new GreenfootImage[NUM_OF_IMAGES];
+    private GreenfootImage[] leftImagesDying = new GreenfootImage[NUM_OF_IMAGES];
     
     private int currentImage = 0; // variable to restart from the 1st image
     
@@ -27,6 +29,9 @@ public class Zombie_1 extends Enemy
         {
             rightImages[i] = new GreenfootImage ("Zombie_01_Walking_right_0" + i + ".png");
             leftImages[i] = new GreenfootImage ("Zombie_01_Walking_left_0" + i + ".png");
+            rightImagesDying[i] = new GreenfootImage ("Zombie_01_Dying_right_0" + i + ".png");
+            leftImagesDying[i] = new GreenfootImage ("Zombie_01_Dying_left_0" + i + ".png");
+            
         }
         
         currentImage = 0;
@@ -47,13 +52,16 @@ public class Zombie_1 extends Enemy
      */
     private void walk() 
     {
-        if (walkSteps < 40) {
+        if (walkSteps < 40) 
+        {
             walkLeft();
         }
-        else if (walkSteps >= 40 && walkSteps < 79) {
+        else if (walkSteps >= 40 && walkSteps < 79) 
+        {
             walkRight();            
         }
-        else {
+        else 
+        {
             walkSteps = 0;
         }
 
@@ -82,10 +90,46 @@ public class Zombie_1 extends Enemy
     }
     
     /**
-     * Μέθοδος η οποία χρησιμοποιείται όταν ο παίχτης χτυπάει με σφαίρα το Zombie.
+     * Method to consume the damage of the bullet's hit.
      */
     public void hurt(int damage) 
     {
         health = health - damage;
+        
+        if (direction == -1)
+        {
+            setImage("Zombie_01_Dying_left_01.png");
+        }
+        
+        else if (direction == 1) 
+        {
+            setImage("Zombie_01_Dying_right_01.png");
+        }
+        
+        if (health <= 0)
+        {
+            die();
+        }
+    }
+    
+    /**
+     * Method for dead zombie.
+     */
+    private void die() 
+    {
+        if (direction == -1) 
+        {
+            switchImage(leftImagesDying, NUM_OF_IMAGES);
+            setLocation(getX(), getY() + 3);
+        }
+
+        else if (direction == 1)
+        {
+            switchImage(rightImagesDying, NUM_OF_IMAGES);
+            setLocation(getX(), getY() + 3);
+        }
+
+        Level_1_World world = (Level_1_World)getWorld();
+        getWorld().removeObject(this);
     }
 }
