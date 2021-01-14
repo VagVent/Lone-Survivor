@@ -77,6 +77,19 @@ public class Hero extends Actor
             {
                 jump();
             }
+        }
+        
+        if ("space".equals(Greenfoot.getKey()))
+        {
+            if (direction == 1)
+            { 
+                fireRight();
+            }
+
+            else if (direction == -1)
+            {
+                fireLeft();
+            }
 
         }
     }
@@ -148,5 +161,27 @@ public class Hero extends Actor
     {
         setLocation(getX(), getY() + vSpeed);
         vSpeed = vSpeed + acceleration;
+    }
+    
+    /**
+     * Method by which the Hero can fire bullets to the left way.
+     */
+    private void fireLeft()
+    {
+        BulletLeft bulletLeft = new BulletLeft();
+        // the subtraction of 48 cells at the X-axis and 14 cells at the Y-axis,
+        // is for start fire the bullets at the height of the gun
+        getWorld().addObject(bulletLeft, getX() - 48, getY() - 14);
+    }
+    
+    /**
+     * Method by which the Hero can fire bullets to the right way.
+     */
+    private void fireRight()
+    {
+        BulletRight bulletRight = new BulletRight();
+        // the addition of 48 cells at the X-axis and the subtraction of 14 cells at the Y-axis,
+        // is for start fire the bullets at the height of the gun
+        getWorld().addObject(bulletRight, getX() + 48, getY() - 14);
     }
 }
