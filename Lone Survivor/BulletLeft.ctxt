@@ -11,5 +11,5 @@ comment3.target=void\ shootLeft()
 comment3.text=\r\n\ Method\ for\ checking\ the\ distance\ of\ the\ bullet\ that\ has\ traveled.\r\n
 comment4.params=
 comment4.target=void\ checkEnemyHit()
-comment4.text=\r\n\ \u039C\u03AD\u03B8\u03BF\u03B4\u03BF\u03C2\ \u03B3\u03B9\u03B1\ \u03C4\u03BF\u03BD\ \u03AD\u03BB\u03B5\u03B3\u03C7\u03BF\ \u03B1\u03BD\ \u03AD\u03C7\u03B5\u03B9\ \u03C7\u03C4\u03C5\u03C0\u03AE\u03C3\u03B5\u03B9\ \u03BA\u03AC\u03C0\u03BF\u03B9\u03BF\ Zombie.\r\n
+comment4.text=\r\n\ Method\ to\ check\ if\ the\ bullet\ hits\ a\ zombie.\r\n
 numComments=5

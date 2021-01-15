@@ -24,7 +24,7 @@ public class Zombie_1 extends Enemy
     private GreenfootImage[] rightImagesAttacking = new GreenfootImage[NUM_OF_IMAGES];
     private GreenfootImage[] leftImagesAttacking = new GreenfootImage[NUM_OF_IMAGES];
         
-    private int currentImage = 0; // variable to restart from the 1st image
+    private int currentImage; // variable to restart from the 1st image
     
     public Zombie_1() 
     {
@@ -139,8 +139,8 @@ public class Zombie_1 extends Enemy
         Level_1_World world = (Level_1_World)getWorld();
         world.addPointToCounter(points);
         
-        // for remove the dead zombie of the world
-        getWorld().removeObject(this);
+        // remove the dead zombie of the world
+        //getWorld().removeObject(this);
     }
     
     /**
