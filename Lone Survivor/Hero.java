@@ -88,6 +88,9 @@ public class Hero extends Actor
         // spacebar
         if ("space".equals(Greenfoot.getKey()))
         {
+            // sound of firing gun
+            Greenfoot.playSound("m16_gun_oneshoot.wav");
+            
             if (direction == 1)
             { 
                 fireRight();

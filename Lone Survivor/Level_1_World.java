@@ -49,15 +49,15 @@ public class Level_1_World extends World
 
         hero = new Hero();         // creates the actor to maintain view on        
         addObject(hero, 55, 500);  // add actor to world
-        
+
         // add counter into the world
         counter = new Counter("Score: ");
         addObject(counter, 65, 25);
-        
+
         // add Hero's healthbar into the world
         healthbar = new HealthBar();
         addObject(healthbar, 65, 60);
-        
+
         /******************************************************************
          * 
          * Creation of the zombies at 1st level.
@@ -66,6 +66,48 @@ public class Level_1_World extends World
 
         Zombie_1 zombie_01 = new Zombie_1();
         addObject(zombie_01,612,500);
+
+        Zombie_1 zombie_02 = new Zombie_1();
+        addObject(zombie_02,712,500);
+
+        Zombie_1 zombie_03 = new Zombie_1();
+        addObject(zombie_03,919,500);
+
+        Zombie_1 zombie_04 = new Zombie_1();
+        addObject(zombie_04,1030,500);
+
+        Zombie_1 zombie_05 = new Zombie_1();
+        addObject(zombie_05,1112,500);
+
+        Zombie_1 zombie_06 = new Zombie_1();
+        addObject(zombie_06,1150,500);
+
+        Zombie_1 zombie_07 = new Zombie_1();
+        addObject(zombie_07,1250,500);
+
+        Zombie_1 zombie_08 = new Zombie_1();
+        addObject(zombie_08,1350,500);
+
+        Zombie_1 zombie_09 = new Zombie_1();
+        addObject(zombie_09,1850,500);
+
+        Zombie_1 zombie_10 = new Zombie_1();
+        addObject(zombie_10, 2050,500);
+
+        Zombie_1 zombie_11 = new Zombie_1();
+        addObject(zombie_11, 2150,500);
+
+        Zombie_1 zombie_12 = new Zombie_1();
+        addObject(zombie_12, 2350,500);
+
+        Zombie_1 zombie_13 = new Zombie_1();
+        addObject(zombie_13, 2550,500);
+
+        Zombie_1 zombie_14 = new Zombie_1();
+        addObject(zombie_14, 2750,500);
+
+        Zombie_1 zombie_15 = new Zombie_1();
+        addObject(zombie_15, 2850,500);
 
         /******************************************************************
          * 

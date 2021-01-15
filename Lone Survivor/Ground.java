@@ -3,15 +3,15 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  *
  * 
- * @author  
- * @version (31/5/2020)
+ * @author Vangelis Ventoulis
+ * @version 
  */
 public class Ground extends Actor
 {
     
     public Ground()
     {
-        // Μετατροπή του μεγέθους της εικόνας σε 4000X100.
+        // change of the image scale to 4000*100
         getImage().scale(4000, 100);
     }
     

@@ -24,7 +24,7 @@ public class Zombie_1 extends Enemy
     private GreenfootImage[] rightImagesAttacking = new GreenfootImage[NUM_OF_IMAGES];
     private GreenfootImage[] leftImagesAttacking = new GreenfootImage[NUM_OF_IMAGES];
         
-    private int currentImage = 0; // variable to restart from the 1st image
+    private int currentImage; // variable to restart from the 1st image
     
     public Zombie_1() 
     {
@@ -102,6 +102,9 @@ public class Zombie_1 extends Enemy
     {
         health = health - damage;
         
+        // sound of the zombie when it is hit by a bullet
+        Greenfoot.playSound("blood_hitting_zombie.wav");
+        
         if (direction == -1)
         {
             setImage("Zombie_01_Dying_left_01.png");
@@ -123,6 +126,9 @@ public class Zombie_1 extends Enemy
      */
     private void die() 
     {
+        // sound of the zombie when it is dying
+        Greenfoot.playSound("zombie_01_dies.wav");
+        
         if (direction == -1) 
         {
             switchImage(leftImagesDying, NUM_OF_IMAGES);
@@ -139,7 +145,7 @@ public class Zombie_1 extends Enemy
         Level_1_World world = (Level_1_World)getWorld();
         world.addPointToCounter(points);
         
-        // for remove the dead zombie of the world
+        // remove the dead zombie of the world
         getWorld().removeObject(this);
     }
     

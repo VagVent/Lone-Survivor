@@ -48,7 +48,7 @@ public class BulletRight extends Actor
     }
     
     /**
-     * Μέθοδος για τον έλεγχο αν έχει χτυπήσει κάποιο Zombie.
+     * Method to check if the bullet hits a zombie..
      */
     private void checkEnemyHit()
     {
