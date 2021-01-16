@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * 2nd Level
+ * 2nd Level.
  * 
  * @author Vangelis Ventoulis
  * @version 
@@ -35,8 +35,7 @@ public class Level_2_World extends World
         // creates the Scroller object
         scroller = new Scroller(this, backGround, backGroundWidth, backGroundHeigth);
 
-        // prepare the new level with the hero and with the point counter which we have
-        // from the previous level
+        // prepare the 2nd level
         prepare();
     }
     
@@ -58,8 +57,6 @@ public class Level_2_World extends World
 
         // add the counter into the wprld
         counter = new Counter("Score: ");
-        // update the counter with the value from the previous level
-        //counter.setValue(points);
         addObject(counter, 65, 25);
 
         // add Hero's healthbar into the world
@@ -69,6 +66,15 @@ public class Level_2_World extends World
         /******************************************************************
          * 
          * Creation of the zombies at 1st level.
+         * 
+         *****************************************************************/
+
+        Zombie_2 zombie_01 = new Zombie_2();
+        addObject(zombie_01,722,500);
+
+        /******************************************************************
+         * 
+         * End of the creation of the zombies.
          * 
          *****************************************************************/
     }
