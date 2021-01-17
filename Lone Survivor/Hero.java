@@ -215,16 +215,20 @@ public class Hero extends Actor
         if (level == 1 )
         {
             Level_1_World world1 = (Level_1_World)getWorld();
+            
             int enemyKills1 = world1.getEnemyKills();
             int points = world1.getCounter();
 
             if (enemyKills1 >= GOALOFLEVEL1)
             {
                 level = 2;
-                                
+                
+                // add the window interface
                 world1.addObject(new GoToLevel2(world1.getCounter()),
                             world1.getWidth()/2, world1.getHeight()/2);
+                // after 10sec will start the 2nd level
                 Greenfoot.delay(10);
+                // setup the 2nd level with the Hero and the points which he has gained
                 Greenfoot.setWorld(new Level_2_World(this, points));            
             }
         }
@@ -239,14 +243,17 @@ public class Hero extends Actor
         if (level == 1 )
         {
             Level_1_World world1 = (Level_1_World)getWorld();
+            
             int health = world1.getHealth();
 
             if (health <= 0)
             {
                 Greenfoot.playSound("grunts_die_man.wav");
                 
+                // add the window interface
                 world1.addObject(new GameOver(world1.getCounter()),
                         world1.getWidth()/2, world1.getHeight()/2);
+                        
                 Greenfoot.stop();
             }            
         }
