@@ -244,9 +244,9 @@ public class Hero extends Actor
             if (health <= 0)
             {
                 Greenfoot.playSound("grunts_die_man.wav");
-                Level_1_World worldForHealth = (Level_1_World)getWorld();
-                worldForHealth.addObject(new GameOver(worldForHealth.getCounter()),
-                        worldForHealth.getWidth()/2, worldForHealth.getHeight()/2);
+                
+                world1.addObject(new GameOver(world1.getCounter()),
+                        world1.getWidth()/2, world1.getHeight()/2);
                 Greenfoot.stop();
             }            
         }
