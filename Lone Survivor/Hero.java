@@ -8,6 +8,11 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Hero extends Actor
 {
+    // set the goal which the player has to do to go to the 2nd level.
+    // the player has to kills 10 zombies.
+    // Change fro 10 to 2 for testing.
+    private final int GOALOFLEVEL1 = 2;
+
     private int speed = 10;           // speed of the Hero's move
     private int direction = 1;        // direction=1 to right, direction=-1 to left
     private int acceleration = 4;     // acceleration of gravity
@@ -23,9 +28,12 @@ public class Hero extends Actor
     
     private int currentImage;
     
+    private int level;               // variable to store the current level
+    
     public Hero()
     {
-
+        level = 1;
+        
         rightImages = new GreenfootImage[NUM_OF_IMAGES];
         leftImages = new GreenfootImage[NUM_OF_IMAGES];
         fireRightImages = new GreenfootImage[NUM_OF_IMAGES];
@@ -51,6 +59,7 @@ public class Hero extends Actor
     {
         checkKeys();
         checkFall();
+        checkForNextLevel();
     }    
     
     /**
@@ -195,5 +204,28 @@ public class Hero extends Actor
         // the addition of 48 cells at the X-axis and the subtraction of 14 cells at the Y-axis,
         // is for start fire the bullets at the height of the gun
         getWorld().addObject(bulletRight, getX() + 48, getY() - 14);
+    }
+
+    /**
+     * Method to go to the 2nd level.
+     */
+    public void checkForNextLevel()
+    {
+        if (level == 1 )
+        {
+            Level_1_World world1 = (Level_1_World)getWorld();
+            int enemyKills1 = world1.getEnemyKills();
+            int points = world1.getCounter();
+
+            if (enemyKills1 >= GOALOFLEVEL1)
+            {
+                level = 2;
+                Level_1_World worldForNextLevel = (Level_1_World)getWorld();
+                worldForNextLevel.addObject(new GoToLevel2(worldForNextLevel.getCounter()),
+                            worldForNextLevel.getWidth()/2, worldForNextLevel.getHeight()/2);
+                Greenfoot.delay(10);
+                Greenfoot.setWorld(new Level_2_World(this, points));            
+            }
+        }
     }
 }

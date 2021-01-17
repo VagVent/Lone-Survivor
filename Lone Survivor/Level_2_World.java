@@ -20,7 +20,7 @@ public class Level_2_World extends World
     /**
      * Constructor for objects of class Level_2_World.
      */
-    public Level_2_World()
+    public Level_2_World(Hero hero, int points)
     {    
         // create a new world with 1000*600 such as the viewport cells with a cell 
         // size of 1x1 pixels.
@@ -32,18 +32,21 @@ public class Level_2_World extends World
         int backGroundWidth = backGround.getWidth();   // scrolling image width
         int backGroundHeigth = backGround.getHeight(); // scrolling image height
 
+        this.hero = hero;
+
         // creates the Scroller object
         scroller = new Scroller(this, backGround, backGroundWidth, backGroundHeigth);
 
-        // prepare the 2nd level
-        prepare();
+        // prepare the 2nd level with the Hero and the points which are gain at the
+        // 1st level
+        prepare(hero, points);
     }
     
     /**
      * Prepare the world for the start of the program.
      * That is: create the initial objects and add them to the world.
      */
-    private void prepare()
+    private void prepare(Hero hero, int points)
     {
         // add the road as the ground of the 2nd level
         Ground ground = new Ground();
@@ -52,11 +55,12 @@ public class Level_2_World extends World
         ground.getImage().scale(5000, 100);
 
         // add the Hero to world
-        hero = new Hero();
         addObject(hero, 55, 500);
 
-        // add the counter into the wprld
+        // add the counter into the world
         counter = new Counter("Score: ");
+        // set the value of the counter from the 1st level 
+        counter.setValue(points);
         addObject(counter, 65, 25);
 
         // add Hero's healthbar into the world

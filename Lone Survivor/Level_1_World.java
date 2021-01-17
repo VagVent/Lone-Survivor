@@ -156,6 +156,14 @@ public class Level_1_World extends World
     }
     
     /**
+     * Getter the value of how many zombies have been killed by the Hero.
+     */
+    public int getEnemyKills()
+    {
+        return counter.getEnemyKills();
+    }
+    
+    /**
      * Getter of HealthBar.
      */
     public HealthBar getHealthBar()
