@@ -106,5 +106,43 @@ public class Level_2_World extends World
         scroller.scroll(dsx, dsy);
     }
 
+    /**
+     * Method to add points at the counter.
+     */
+    public void addPointToCounter(int points)
+    {
+        counter.add(points);
+    }
     
+    /**
+     * Getter of the value of the counter.
+     */
+    public int getCounter()
+    {
+        return counter.getValue();
+    }
+
+    /**
+     * Getter the value of how many zombies have been killed by the Hero.
+     */
+    public int getEnemyKills()
+    {
+        return counter.getEnemyKills();
+    }
+
+    /**
+     * Getter of HealthBar.
+     */
+    public HealthBar getHealthBar()
+    {
+        return healthbar;
+    }
+
+    /**
+     * Getter of the value of Hero's health.
+     */
+    public int getHealth()
+    {
+        return healthbar.getHealth();
+    }
 }

@@ -131,7 +131,7 @@ public class Zombie_2 extends Enemy
         }
         
         // to adding the dead zombies' points to the counter
-        Level_1_World world = (Level_1_World)getWorld();
+        Level_2_World world = (Level_2_World)getWorld();
         world.addPointToCounter(points);
         
         // remove the dead zombie of the world
