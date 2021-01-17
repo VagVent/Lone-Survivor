@@ -6,7 +6,7 @@ all he/she needs to know. The comments should usually include at least:
 
 PROJECT TITLE:             Lone Survivor
 PURPOSE OF PROJECT:        Education project. Action game.
-VERSION or DATE:
+VERSION or DATE:		   1.0
 HOW TO START THIS PROJECT: 
 AUTHORS:                   Vangelis Ventoulis
 USER INSTRUCTIONS:         
