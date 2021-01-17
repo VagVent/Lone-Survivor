@@ -69,12 +69,15 @@ public class Level_2_World extends World
 
         /******************************************************************
          * 
-         * Creation of the zombies at 1st level.
+         * Creation of the zombies at 2nd level.
          * 
          *****************************************************************/
 
         Zombie_2 zombie_01 = new Zombie_2();
         addObject(zombie_01,722,500);
+
+        Zombie_3 zombie_03 = new Zombie_3();
+        addObject(zombie_03,1379,500);
 
         /******************************************************************
          * 
