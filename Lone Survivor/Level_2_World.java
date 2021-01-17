@@ -76,8 +76,41 @@ public class Level_2_World extends World
         Zombie_2 zombie_01 = new Zombie_2();
         addObject(zombie_01,722,500);
 
+        Zombie_2 zombie_02 = new Zombie_2();
+        addObject(zombie_02,812,500);
+
         Zombie_3 zombie_03 = new Zombie_3();
         addObject(zombie_03,1379,500);
+        
+        Zombie_2 zombie_04 = new Zombie_2();
+        addObject(zombie_04,1612,500);
+        
+        Zombie_3 zombie_05 = new Zombie_3();
+        addObject(zombie_05,1912,500);
+        
+        Zombie_3 zombie_06 = new Zombie_3();
+        addObject(zombie_06,2212,500);
+        
+        Zombie_3 zombie_07 = new Zombie_3();
+        addObject(zombie_07,2512,500);
+        
+        Zombie_2 zombie_08 = new Zombie_2();
+        addObject(zombie_08,2715,500);
+        
+        Zombie_3 zombie_09 = new Zombie_3();
+        addObject(zombie_09,3000,500);
+        
+        Zombie_2 zombie_10 = new Zombie_2();
+        addObject(zombie_10,3050,500);
+        
+        Zombie_2 zombie_11 = new Zombie_2();
+        addObject(zombie_11,3190,500);
+        
+        Zombie_3 zombie_12 = new Zombie_3();
+        addObject(zombie_12,3300,500);
+        
+        Zombie_3 zombie_13 = new Zombie_3();
+        addObject(zombie_13,3500,500);
 
         /******************************************************************
          * 
