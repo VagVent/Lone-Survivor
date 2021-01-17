@@ -221,9 +221,9 @@ public class Hero extends Actor
             if (enemyKills1 >= GOALOFLEVEL1)
             {
                 level = 2;
-                Level_1_World worldForNextLevel = (Level_1_World)getWorld();
-                worldForNextLevel.addObject(new GoToLevel2(worldForNextLevel.getCounter()),
-                            worldForNextLevel.getWidth()/2, worldForNextLevel.getHeight()/2);
+                                
+                world1.addObject(new GoToLevel2(world1.getCounter()),
+                            world1.getWidth()/2, world1.getHeight()/2);
                 Greenfoot.delay(10);
                 Greenfoot.setWorld(new Level_2_World(this, points));            
             }
