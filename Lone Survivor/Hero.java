@@ -257,5 +257,23 @@ public class Hero extends Actor
                 Greenfoot.stop();
             }            
         }
+
+        else if (level == 2 )
+        {
+            Level_2_World world2 = (Level_2_World)getWorld();
+            
+            int health = world2.getHealth();
+
+            if (health <= 0)
+            {
+                Greenfoot.playSound("grunts_die_man.wav");
+                
+                // add the window interface
+                world2.addObject(new GameOver(world2.getCounter()),
+                        world2.getWidth()/2, world2.getHeight()/2);
+                        
+                Greenfoot.stop();
+            }            
+        }
     }
 }
