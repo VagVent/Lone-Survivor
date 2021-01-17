@@ -1,5 +1,9 @@
 # Auto detect text files and perform LF normalization
+<<<<<<< HEAD
 
 
 *.css linguist-detectable=false
 *.js linguist-detectable=false
+=======
+* text=auto
+>>>>>>> parent of 8def9ad... Update .gitattributes
