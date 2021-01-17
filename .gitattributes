@@ -1,5 +1,7 @@
 # Auto detect text files and perform LF normalization
-* linguist-vendored
-*.css linguist-detectable=false
-*.js linguist-vendored=false
-*.java linguist-vendored=true
+*.js linguist-detectable=true
+*.html linguist-detectable=false
+*.htm inguist-detectable=false
+public/libs/* linguist-vendored
+scot-ui/public/libs/ linguist-vendored
+docs/* linguist-documentation
