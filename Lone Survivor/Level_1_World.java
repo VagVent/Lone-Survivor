@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Level_1_World extends World
 {
-    private static final int WIDE = 1000;   // width viewport
+    private static final int WIDTH = 1000;   // width viewport
     private static final int HEIGHT = 600;  // height viewport
     
     private Hero hero;    
@@ -23,7 +23,7 @@ public class Level_1_World extends World
     public Level_1_World()
     {    
         // Create a new world with 3000x600 cells with a cell size of 1x1 pixels.
-        super(WIDE, HEIGHT, 1, false);
+        super(WIDTH, HEIGHT, 1, false);
         
         // Setup the background image of the 1st level.
         GreenfootImage backGround = new GreenfootImage("bg_level_1_3000x600.png");
@@ -133,7 +133,7 @@ public class Level_1_World extends World
      */
     private void scroll() 
     {
-        int dsx = hero.getX() - WIDE / 2;
+        int dsx = hero.getX() - WIDTH / 2;
         int dsy = hero.getY() - HEIGHT / 2;
 
         scroller.scroll(dsx, dsy);
