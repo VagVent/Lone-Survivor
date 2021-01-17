@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=StartScreen
+comment0.text=\r\n\ Start\ screen\ of\ the\ game.\r\n\ \r\n\ @author\ Vangelis\ Ventoulis\r\n\ @version\ 17/1/2021\r\n
+comment1.params=
+comment1.target=StartScreen()
+comment2.params=
+comment2.target=void\ act()
+comment2.text=\r\n\ Method\ by\ which\ the\ player\ have\ to\ press\ the\ Enter\ button\ to\ start\ the\ 1st\ level.\r\n
+comment3.params=
+comment3.target=void\ prepare()
+comment3.text=\r\n\ Prepare\ the\ world\ for\ the\ start\ of\ the\ program.\r\n\ That\ is\:\ create\ the\ initial\ objects\ and\ add\ them\ to\ the\ world.\r\n
+numComments=4
