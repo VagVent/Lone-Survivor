@@ -13,6 +13,11 @@ public class Hero extends Actor
     // Change from 10 to 2 for testing.
     private final int GOALOFLEVEL1 = 2;
 
+    // set the goal which the player has to do to wins the game.
+    // the player has to kills 12 zombies.
+    // Change from 12 to 1 for testing.
+    private final int GOALOFLEVEL2 = 1;
+
     private int speed = 10;           // speed of the Hero's move
     private int direction = 1;        // direction=1 to right, direction=-1 to left
     private int acceleration = 4;     // acceleration of gravity
@@ -112,7 +117,6 @@ public class Hero extends Actor
                 fireLeft();
                 switchImage(fireLeftImages);
             }
-
         }
     }
     
@@ -230,6 +234,21 @@ public class Hero extends Actor
                 Greenfoot.delay(10);
                 // setup the 2nd level with the Hero and the points which he has gained
                 Greenfoot.setWorld(new Level_2_World(this, points));            
+            }
+        }
+
+        else if (level == 2)
+        {
+            Level_2_World world2 = (Level_2_World)getWorld();
+            int enemyKills2 = world2.getEnemyKills();
+
+            if (enemyKills2 >= GOALOFLEVEL2)
+            {
+                // add the window interface of LastScreen
+                world2.addObject(new GoToLastScreen(world2.getCounter()),
+                                world2.getWidth()/2, world2.getHeight()/2);
+                // stop the game
+                Greenfoot.stop();
             }
         }
     }
