@@ -10,13 +10,11 @@ public class Hero extends Actor
 {
     // set the goal which the player has to do to go to the 2nd level.
     // the player has to kills 10 zombies.
-    // Change from 10 to 2 for testing.
-    private final int GOALOFLEVEL1 = 2;
+    private final int GOALOFLEVEL1 = 10;
 
     // set the goal which the player has to do to wins the game.
     // the player has to kills 12 zombies.
-    // Change from 12 to 1 for testing.
-    private final int GOALOFLEVEL2 = 1;
+    private final int GOALOFLEVEL2 = 12;
 
     private int speed = 10;           // speed of the Hero's move
     private int direction = 1;        // direction=1 to right, direction=-1 to left
