@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=GoToLevel2
+comment0.text=\r\n\ GoToLevel2\ is\ a\ class\ to\ transfer\ to\ 2nd\ level.\r\n\ \r\n\ @author\ Vangleis\ Ventoulis\r\n\ @version\ 16/1/2021\r\n
+comment1.params=
+comment1.target=GoToLevel2()
+comment2.params=score
+comment2.target=GoToLevel2(int)
+comment2.text=\r\n\ Create\ a\ scoreboard\ for\ the\ score.\r\n
+comment3.params=title\ prefix\ score
+comment3.target=void\ makeImage(java.lang.String,\ java.lang.String,\ int)
+comment3.text=\r\n\ Make\ the\ scoreboard\ image.\r\n
+numComments=4

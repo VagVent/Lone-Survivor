@@ -1,0 +1,27 @@
+#BlueJ class context
+comment0.target=Zombie_2
+comment0.text=\r\n\ Zombie\ 2\ class.\r\n\ \r\n\ @author\ Vangelis\ Ventoulis\ \r\n\ @version\ 16/1/2021\r\n
+comment1.params=
+comment1.target=Zombie_2()
+comment2.params=
+comment2.target=void\ act()
+comment2.text=\r\n\ Act\ -\ do\ whatever\ the\ Zombie_2\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment3.params=
+comment3.target=void\ walk()
+comment3.text=\r\n\ Method\ for\ walking\ the\ zombie.\r\n
+comment4.params=
+comment4.target=void\ walkLeft()
+comment4.text=\r\n\ Method\ for\ walking\ left.\r\n
+comment5.params=
+comment5.target=void\ walkRight()
+comment5.text=\r\n\ Method\ for\ walking\ right.\r\n
+comment6.params=damage
+comment6.target=void\ hurt(int)
+comment6.text=\r\n\ Method\ to\ consume\ the\ damage\ of\ the\ bullet's\ hit.\r\n
+comment7.params=
+comment7.target=void\ die()
+comment7.text=\r\n\ Method\ for\ dead\ zombie.\r\n
+comment8.params=
+comment8.target=void\ hitHero()
+comment8.text=\r\n\ Method\ to\ check\ the\ attack\ to\ Hero\ when\ they\ intersecting.\r\n
+numComments=9

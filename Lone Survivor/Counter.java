@@ -37,6 +37,8 @@ public class Counter extends Actor
     private int value;
     private int target;
     private String prefix;
+
+    private int enemyKills = 0; // a counter for enemies which were killed from Hero
     
     public Counter()
     {
@@ -77,6 +79,7 @@ public class Counter extends Actor
     public void add(int score)
     {
         target += score;
+        enemyKills++;      // add +1 when kills a zombie
     }
 
     /**
@@ -131,5 +134,13 @@ public class Counter extends Actor
     public void setLocation(int x, int y) 
     {
         
+    }
+
+    /**
+     * Getter of variable enemyKills
+     */
+    public int getEnemyKills()
+    {
+        return enemyKills;
     }
 }

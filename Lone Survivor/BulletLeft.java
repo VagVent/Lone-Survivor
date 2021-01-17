@@ -53,10 +53,24 @@ public class BulletLeft extends Actor
     private void checkEnemyHit()
     {
         Zombie_1 zombie1 = (Zombie_1) getOneIntersectingObject(Zombie_1.class);
+        Zombie_2 zombie2 = (Zombie_2) getOneIntersectingObject(Zombie_2.class);
+        Zombie_3 zombie3 = (Zombie_3) getOneIntersectingObject(Zombie_3.class);
 
         if (zombie1 != null)
         {            
             zombie1.hurt(BULLETDAMAGE);
+            getWorld().removeObject(this);
+        }
+
+        else if (zombie2 != null)
+        {            
+            zombie2.hurt(BULLETDAMAGE);
+            getWorld().removeObject(this);
+        }
+
+        else if (zombie3 != null)
+        {            
+            zombie3.hurt(BULLETDAMAGE);
             getWorld().removeObject(this);
         }
     }
