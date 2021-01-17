@@ -60,6 +60,7 @@ public class Hero extends Actor
         checkKeys();
         checkFall();
         checkForNextLevel();
+        gameOver();
     }    
     
     /**
@@ -226,6 +227,28 @@ public class Hero extends Actor
                 Greenfoot.delay(10);
                 Greenfoot.setWorld(new Level_2_World(this, points));            
             }
+        }
+    }
+
+    /**
+     * Method to appear the window interface when the Hero has died with
+     * a game over message and the score.
+     */
+    private void gameOver()
+    {
+        if (level == 1 )
+        {
+            Level_1_World world1 = (Level_1_World)getWorld();
+            int health = world1.getHealth();
+
+            if (health <= 0)
+            {
+                Greenfoot.playSound("grunts_die_man.wav");
+                Level_1_World worldForHealth = (Level_1_World)getWorld();
+                worldForHealth.addObject(new GameOver(worldForHealth.getCounter()),
+                        worldForHealth.getWidth()/2, worldForHealth.getHeight()/2);
+                Greenfoot.stop();
+            }            
         }
     }
 }
